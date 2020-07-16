@@ -3,7 +3,7 @@
 #define SWIFT_STRUCT_ALIGNMENT 32
 
 #define colibre_cooling_N_temperature 86
-#define colibre_cooling_N_redshifts 10
+#define colibre_cooling_N_redshifts 46
 #define colibre_cooling_N_density 71
 #define colibre_cooling_N_metallicity 11
 #define colibre_cooling_N_internalenergy 191

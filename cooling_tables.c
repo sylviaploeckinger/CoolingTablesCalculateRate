@@ -241,7 +241,7 @@ void read_cooling_tables(struct cooling_function_data *restrict cooling) {
                      sizeof(float)) != 0)
     printf("Failed to allocate Telectron_fraction array\n");
 
-  dataset = H5Dopen(tempfile_id, "/Tdep/ElectronFractionsVol", H5P_DEFAULT);
+  dataset = H5Dopen(tempfile_id, "/Tdep/ElectronFractions", H5P_DEFAULT);
   status = H5Dread(dataset, H5T_NATIVE_FLOAT, H5S_ALL, H5S_ALL, H5P_DEFAULT, cooling->table.Telectron_fraction);
   if (status < 0) printf("error reading electron_fraction (temperature)\n");
   status = H5Dclose(dataset);
@@ -255,7 +255,7 @@ void read_cooling_tables(struct cooling_function_data *restrict cooling) {
                      sizeof(float)) != 0)
     printf("Failed to allocate Uelectron_fraction array\n");
 
-  dataset = H5Dopen(tempfile_id, "/Udep/ElectronFractionsVol", H5P_DEFAULT);
+  dataset = H5Dopen(tempfile_id, "/Udep/ElectronFractions", H5P_DEFAULT);
   status = H5Dread(dataset, H5T_NATIVE_FLOAT, H5S_ALL, H5S_ALL, H5P_DEFAULT, cooling->table.Uelectron_fraction);
   if (status < 0) printf("error reading electron_fraction (internal energy)\n");
   status = H5Dclose(dataset);

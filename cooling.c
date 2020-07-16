@@ -15,7 +15,7 @@ void cooling_init_backend(struct cooling_function_data *cooling, struct particle
 
 
   /* Setting the path for the hdf5 file */
-  strcpy(cooling->cooling_table_path,"/cosma7/data/dp004/dc-ploe1/CoolingTables/2019_04/UV_dust1_CR1_G1_shield1.hdf5");
+  strcpy(cooling->cooling_table_path,"/path/to/table/UVB_dust1_CR1_G1_shield1.hdf5");
   printf("\n----------------------------------------------------------------------------\n");
   printf("\n Reading in from file: \n");
   printf("     %s\n",cooling->cooling_table_path);
