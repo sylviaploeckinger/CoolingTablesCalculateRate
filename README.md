@@ -1,5 +1,5 @@
 # CoolingTablesCalculateRate
-Stand-alone C program that reads in the CoolingTables from Ploeckinger & Schaye (in prep.), 
+Stand-alone C program that reads in the CoolingTables from Ploeckinger & Schaye (MNRAS, accepted), 
 interpolates in 4 dimensions,and returns the total net cooling rate for arbitrary abundance 
 ratios, redshifts, densities and temperatures
 
@@ -16,19 +16,19 @@ For coupling with a hydro code, the net cooling rate for a resolution element is
 
 where:
 
-log_u_cgs: log10 of the internal energy per mass of the particle in cgs units [erg g-1]
-redshift : redshift of the simulation
-n_H_cgs  : hydrogen number density in cgs [cm-3]
-logZZsol : log10 of the metal mass fraction of the particle over the solar metal mass fraction
-abundance_ratio: abundance ratio for the traced elements relative to the abundance ratio assumed in the tables
-                 (see routine abundance_ratio_to_solar for details)
-indices and deltas for each table dimension (get with get_index_1d) 
-cooling  : structure that contains all necessary table values
+* `log_u_cgs`: log10 of the internal energy per mass of the particle in cgs units [erg g-1]
+* `redshift` : redshift of the simulation
+* `n_H_cgs`  : hydrogen number density in cgs [cm-3]
+* `logZZsol` : log10 of the metal mass fraction of the particle over the solar metal mass fraction
+* `abundance_ratio`: abundance ratio for the traced elements relative to the abundance ratio assumed in the tables
+                 (see routine a`bundance_ratio_to_solar` for details)
+* indices and deltas for each table dimension (get with `get_index_1d`) 
+* `cooling`  : structure that contains all necessary table values
 
 Run the code:
-- requires gsl (https://www.gnu.org/software/gsl/)
+- requires [gsl](https://www.gnu.org/software/gsl/)
 
-1) change the path to the cooling tables in cooling.c
-   change gas density and redshift in cooling_function.c (optional)
+1) * change the path to the cooling tables in cooling.c
+   * change gas density and redshift in cooling_function.c (optional)
 2) make
 3) ./cool
